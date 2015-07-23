@@ -80,4 +80,13 @@ Rails.application.configure do
   # required for Heroku
   # set to actual host
   config.action_mailer.default_url_options = { :host => 'https://med-pinterest.herokuapp.com' } 
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['meditationspot'],
+    :access_key_id => ENV['AKIAI67BY5YN33OSHUBQ,IQW'],
+    :secret_access_key => ENV['gWqvB0levi27Ac9y4H+k8fWgQ2TD']
+  }
+}
 end
