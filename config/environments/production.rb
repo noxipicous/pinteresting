@@ -81,12 +81,13 @@ Rails.application.configure do
   # set to actual host
   config.action_mailer.default_url_options = { :host => 'https://med-pinterest.herokuapp.com' } 
 
+  # aws for paperclip
   config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['meditationspot'],
-    :access_key_id => ENV['AKIAI67BY5YN33OSHUBQ,IQW'],
-    :secret_access_key => ENV['gWqvB0levi27Ac9y4H+k8fWgQ2TD']
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
   }
-}
 end

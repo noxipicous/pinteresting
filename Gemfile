@@ -21,6 +21,7 @@ gem 'devise'
 # gem "paperclip", "~> 4.3"
 gem 'paperclip', github: 'thoughtbot/paperclip'
 
+# for image storage
 gem 'aws-sdk', '< 2.0'
 
 # Use ActiveModel has_secure_password
