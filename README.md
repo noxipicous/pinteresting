@@ -1,2 +1,1 @@
-# pinteresting
-pinterest clone
+Pinterest style meditation social network
